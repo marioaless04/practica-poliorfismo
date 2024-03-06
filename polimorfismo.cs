@@ -6,7 +6,10 @@ public abstract class Beyblade
     {
         return "Beyblade rotando";
     }
-    public abstract string evolucionar();
+    public abstract string evolucionar()
+    {
+        return "Beyblade evolucionando";
+    }
 }
 public class Pegasus : Beyblade
 {
@@ -16,7 +19,7 @@ public class Pegasus : Beyblade
     }
     public override string evolucionar()
     {
-        retutn "Pegasus evolucionando";
+        return "Pegasus evolucionando";
     }
 }
 public class Virgo : Beyblade
@@ -29,4 +32,22 @@ public class Virgo : Beyblade
     {
         retutn "Virgo evolucionando";
     }
+}
+
+class Program
+{
+   static void Main(string[] args)
+   {
+        Beyblade beyblade = new Beyblade();
+        beyblade.rotar();
+        beyblade.evolucionar();
+ 
+        Pegasus pegasus= new Pegasus();
+        pegasus.rotar();
+        pegasus.evolucionar();
+        
+        Virgo virgo = new Virgo();
+        virgo.rotar();
+        virgo.evolucionar();
+   }
 }
